@@ -31,9 +31,6 @@ function App() {
 
     const openai = new OpenAIApi(new Configuration({
       apiKey: import.meta.env.VITE_OPENAI_API_KEY,
-      header: {
-        'OpenAI-Organization': 'org-7nbfQ5qrHMHC9nl91q5my59o',
-      }
     }));
 
     const response = await openai.createChatCompletion({
@@ -61,7 +58,7 @@ function App() {
         </div>
 
         <p className='rights'>
-          Developed by Fridev SL &copy; 2023. V. 1.0.2
+          Developed by Jordi Sanchez 2023. V. 1.0.2
         </p>
       </aside>
 

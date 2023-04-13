@@ -47,7 +47,7 @@ button {
   right: 0;
 }
 
-@media (min-width:900px) {
+@media (min-width:768px) {
   .App {
     flex-direction: row;
   }
@@ -66,7 +66,7 @@ button {
   color: #000;
 }
 
-@media (min-width:900px) {
+@media (min-width:768px) {
   .sidemenu {
     width: 300px;
     padding: 12px;
@@ -114,12 +114,10 @@ Chat logs Section
   align-items: center;
 }
 
-@media (min-width:900px) {
+@media (min-width:768px) {
   .chatbox {
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
   }
 }
 
@@ -144,20 +142,32 @@ form {
 
 .chat-input-textarea {
   position: fixed;
-  bottom: 5vh;
+  bottom: 30px;
   box-shadow: 0px 0px 50px 10px #00000070;
   background-color: #125ae1;
-  width: 90%;
-  max-width: 720px;  
+  width: 100%; 
   padding: 12px;
   color: #fff;
   border-radius: 5px;
   border: none;
   outline: none;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .chat-input-textarea {
+    max-width: 480px; 
+  }
+}
+
+@media (min-width: 1000px) {
+  .chat-input-textarea {
+    max-width: 720px; 
+  }
 }
 
 .chat-input-textarea::placeholder {
-  color: #ffffff90;
+  color: #ffffff;
 }
 
 .chat-input-textarea:focus {
@@ -174,7 +184,7 @@ form {
   font-size: 8px;
 }
 
-@media (min-width:900px) {
+@media (min-width:768px) {
   .chat-input-copy {
     font-size: 12px;
   }
@@ -182,12 +192,24 @@ form {
 
 .chat-input-btn {
   position: absolute;
-  bottom: 3vh;
-  right: 0;
+  bottom: 10px;
+  right: 10px;
   background-color: transparent;
   color: #e0dfdf;
   text-align: center;
   font-size: 8px;
+}
+
+@media (min-width: 768px) {
+  .chat-input-btn {
+    right: 6vw;
+  }
+}
+
+@media (min-width: 1000px) {
+  .chat-input-btn {
+    right: 20px;
+  }
 }
 
 .chat-input-btn:hover {
@@ -247,7 +269,7 @@ form {
   margin-right: 4px;
 }
 
-@media (min-width:900px) {
+@media (min-width:768px) {
   .chat-message-center {
     padding-left: 40px;
     padding-right: 40px;
