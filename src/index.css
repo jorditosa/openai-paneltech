@@ -120,9 +120,18 @@ form {
   box-shadow: 0px 0px 50px 10px #ffffff70;
 }
 
-.chat-input-btn {
+.chat-input-btnSend {
   background-color: transparent;
   color: #125ae1;
+  display: flex;
+  gap: 20px;
+}
+
+.chat-input-btnImage {
+  background-color: transparent;
+  color: #125ae185;
+  display: flex;
+  gap: 20px;
 }
 
 .chat-input-btn:hover {

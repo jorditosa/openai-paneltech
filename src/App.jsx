@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Configuration, OpenAIApi } from "openai";
 import ChatMessage from './components/ChatMessage'
-import { FaPaperPlane } from 'react-icons/fa'
+import { FaPaperPlane, FaImage } from 'react-icons/fa'
 import Aside from './components/Aside'
 
 function App() {
@@ -60,9 +60,12 @@ function App() {
             placeholder="Escriu aquí..."
             >
             </input>
-            <button type="submit" className="chat-input-btn">
-                <FaPaperPlane size={25} />
+            <button type="submit" className="chat-input-btnSend">
+              <FaPaperPlane size={30} />
             </button>
+            <span disabled className='chat-input-btnImage'>
+              <FaImage size={30} />
+            </span>
           </form>
         </div>
       </section>
