@@ -5,9 +5,11 @@ function Aside() {
 
   return (
     <aside className={`${styles.sidemenu}`}>
-        <img className='logo' src={Logo} alt="logo" />
+        <img className={`${styles.logo}`} src={Logo} alt="logo" />
 
-        <p className='rights'>
+        <h1 className={`${styles.sidemenuHeading}`}>Nicequest OpenAI</h1>
+
+        <p className={`${styles.rights}`}>
           Developed by Jordi Sanchez 2023. V. 1.0.2
         </p>
     </aside>
