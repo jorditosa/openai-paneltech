@@ -1,21 +1,12 @@
-import React from 'react'
-import { FaUser, FaSpinner } from 'react-icons/fa'
-import LoadingEffect from './LoadingEffect'
+import styles from './ChatMessage.module.css'
 
-function ChatMessage({message, loading, chatlog}) {
+function ChatMessage({message}) {
 
   return (
-    <div className={`chat-message ${message.user === "gpt" && "chatgpt"}`}>
-        <div className="chat-message-center">
-            <div className={`avatar ${message.user === "gpt" && "avatar-gpt"}`}>
-                {message.user === "gpt" ? <FaSpinner style={{ fill: 'white' }} size={30}/> : <FaUser size={30} />}
-            </div>
-            <div className="message">
-              {message.user === "gpt" && message.id === chatlog.length && loading ? (
-                <LoadingEffect />
-              ) : (
-                message.message
-              )}
+    <div className={`${styles.ChatMessage} ${message.user} === "gpt" && ${styles.chatGPT}`}>
+        <div className={`${styles.ChatMessageCenter}`}>
+            <div className={message.user === "gpt" ? `${styles.messageGPT}` : `${styles.message}`}>
+                {message.message}
             </div>
         </div>
     </div>

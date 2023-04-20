@@ -105,13 +105,13 @@ Chat logs Section
 
 .chatbox {
   flex: 1;
-  background-color: #F3F5FF;
-  overflow: auto;
+  background-color: #125ae1;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
+  padding: 5vh 1vw;
 }
 
 @media (min-width:768px) {
@@ -128,213 +128,54 @@ Chat logs Section
   bottom: 0;
 } 
 
+.chat-log {
+  width: 100%;
+  max-width: 920px;
+}
+
 form {
   width: 100%;
-  max-width: 720px;
+  max-width: 920px;
   margin-left: auto;
   margin-right: auto;
   font-size: 1.2em;
+  padding: 8px 14px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  position: relative;
+  background-color: #fff;
+  box-shadow: 0px 0px 50px 10px #00000070;
+  border-radius: 25px;
+  color: #000;
 }
 
 .chat-input-textarea {
-  position: fixed;
-  bottom: 30px;
-  box-shadow: 0px 0px 50px 10px #00000070;
-  background-color: #125ae1;
+  background-color: transparent;
   width: 100%; 
-  padding: 12px;
-  color: #fff;
-  border-radius: 5px;
   border: none;
   outline: none;
-  font-size: 16px;
-}
-
-@media (min-width: 768px) {
-  .chat-input-textarea {
-    max-width: 480px; 
-  }
-}
-
-@media (min-width: 1000px) {
-  .chat-input-textarea {
-    max-width: 720px; 
-  }
+  font-size: 20px;
 }
 
 .chat-input-textarea::placeholder {
-  color: #ffffff;
+  color: #000;
 }
 
 .chat-input-textarea:focus {
   box-shadow: 0px 0px 50px 10px #ffffff70;
 }
 
-.chat-input-copy {
-  position: fixed;
-  bottom: 1px;
-  width: 100%;
-  color: #000;
-  text-align: center;
-  padding-top: 1vh;
-  font-size: 8px;
-}
-
-@media (min-width:768px) {
-  .chat-input-copy {
-    font-size: 12px;
-  }
-}
-
 .chat-input-btn {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
   background-color: transparent;
-  color: #e0dfdf;
-  text-align: center;
-  font-size: 8px;
-}
-
-@media (min-width: 768px) {
-  .chat-input-btn {
-    right: 6vw;
-  }
-}
-
-@media (min-width: 1000px) {
-  .chat-input-btn {
-    right: 20px;
-  }
+  color: #125ae1;
 }
 
 .chat-input-btn:hover {
-  color: #ffffff;
+  color: #125ae1b2;
   cursor: pointer;
 }
 
-.chat-log {
-  width: 100%;
-}
-
-.chat-message-center {
-  width: 100%;
-  max-width: 720px;
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  padding-left: 24px;
-  padding-right: 24px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.chat-message:last-child {
-  margin-bottom: 20vh;
-}
-
-.chat-message {
-  background-color: #125ae110;
-  box-shadow: 1px 1px 2px 2px #125ae1a7;
-}
-
-.chat-message.chatgpt {
-  background-color: #125ae130;
-}
-
-.avatar {
-  background-color: #1dc9ab;
-  box-shadow: 0px 0px 2px 2px #04050750;
-  border-radius: 5px;
-  width: 40px;
-  height: 40px;
-  padding: 5px;
-  color: #fff;
-
-}
-
-.avatar-gpt {
-  background-color: #ffc500;
-  width: 40px;
-  height: 40px;
-}
-
-.message {
-  color: #000;
-  margin-left: 12px;
-  margin-right: 4px;
-}
-
-@media (min-width:768px) {
-  .chat-message-center {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
 
 
-/******** LOADING EFFECT **************/
-.sk-cube-grid {
-  width: 30px;
-  height: 30px;
-}
 
-.sk-cube-grid .sk-cube {
-  width: 33%;
-  height: 33%;
-  background-color: #fff;
-  float: left;
-  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
-          animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
-}
-.sk-cube-grid .sk-cube1 {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s; }
-.sk-cube-grid .sk-cube2 {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s; }
-.sk-cube-grid .sk-cube3 {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s; }
-.sk-cube-grid .sk-cube4 {
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s; }
-.sk-cube-grid .sk-cube5 {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s; }
-.sk-cube-grid .sk-cube6 {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s; }
-.sk-cube-grid .sk-cube7 {
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s; }
-.sk-cube-grid .sk-cube8 {
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s; }
-.sk-cube-grid .sk-cube9 {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s; }
 
-@-webkit-keyframes sk-cubeGridScaleDelay {
-  0%, 70%, 100% {
-    -webkit-transform: scale3D(1, 1, 1);
-            transform: scale3D(1, 1, 1);
-  } 35% {
-    -webkit-transform: scale3D(0, 0, 1);
-            transform: scale3D(0, 0, 1); 
-  }
-}
-
-@keyframes sk-cubeGridScaleDelay {
-  0%, 70%, 100% {
-    -webkit-transform: scale3D(1, 1, 1);
-            transform: scale3D(1, 1, 1);
-  } 35% {
-    -webkit-transform: scale3D(0, 0, 1);
-            transform: scale3D(0, 0, 1);
-  } 
-}

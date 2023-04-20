@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import { Configuration, OpenAIApi } from "openai";
 import ChatMessage from './components/ChatMessage'
-import Logo from './assets/logo-white.svg'
-import { FaPlus, FaPaperPlane } from 'react-icons/fa'
-import LoadingEffect from './components/LoadingEffect'
+import { FaPaperPlane } from 'react-icons/fa'
+import Aside from './components/Aside'
 
 function App() {
 
@@ -11,14 +10,10 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [chatlog, setChatlog] = useState([{
     user: 'gpt',
-    message: 'Hola soc la Techi, la asistent virtual de Panel Tech, com et puc ajudar?',
+    message: 'Hola soc la Techi, estic configurada per assisstir-te a millora el teu codi i processos. Com et puc ajudar?',
     id: 1,
   },]);
 
-  // clear chats
-  function clearChat() {
-    setChatlog([]);
-  }
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -26,8 +21,6 @@ function App() {
     setInput('');
     setChatlog(chatLogNew);
     setLoading(true);
-
-    const messages = chatLogNew.map((message) => message.message).join('\n');
 
     const openai = new OpenAIApi(new Configuration({
       apiKey: import.meta.env.VITE_OPENAI_API_KEY,
@@ -47,20 +40,7 @@ function App() {
 
   return (
     <div className="App">
-      <aside className="sidemenu">
-        <img className='logo' src={Logo} alt="logo" />
-
-        <div className="side-menu-button" onClick={clearChat}>
-          <span>
-            <FaPlus size={15} />
-          </span>
-          Nou xat
-        </div>
-
-        <p className='rights'>
-          Developed by Jordi Sanchez 2023. V. 1.0.2
-        </p>
-      </aside>
+      <Aside chatlog={chatlog} />
 
       <section className='chatbox'>
         <div className="chat-log">
@@ -80,11 +60,11 @@ function App() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Escriu aquí..."
-            />
+            >
+            </input>
             <button type="submit" className="chat-input-btn">
-              <FaPaperPlane size={20} />
+                <FaPaperPlane size={25} />
             </button>
-            <p className='chat-input-copy'>Tots els drets reservats a Netquest Soluciones Tecnologicas SL &copy;.</p>
           </form>
         </div>
       </section>
