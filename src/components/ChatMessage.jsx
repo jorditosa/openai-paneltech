@@ -6,12 +6,11 @@ import SyncLoader from "react-spinners/SyncLoader";
 function ChatMessage({ message }) {
   const [isLoading, setIsLoading] = useState(true);
 
-  // Simulamos una llamada fetch con un timeout de 2 segundos
   setTimeout(() => setIsLoading(false), 2000);
 
   return (
     <div className={`${styles.ChatMessage} ${message.user === 'gpt' && styles.chatGPT}`}>
-      {isLoading ? (
+      {isLoading && message.user !== 'user' ? (
         <div className={styles.spinner}>
           <SyncLoader color="#ffffff" size={20} />
         </div>
