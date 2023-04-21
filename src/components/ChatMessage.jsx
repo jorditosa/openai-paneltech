@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from './ChatMessage.module.css';
 import SyncLoader from "react-spinners/SyncLoader";
+import ReactMarkdown from 'react-markdown';
 
 
 function ChatMessage({ message }) {
@@ -17,7 +18,7 @@ function ChatMessage({ message }) {
       ) : (
         <div className={`${styles.ChatMessageCenter}`}>
           <div className={message.user === 'gpt' ? `${styles.messageGPT}` : `${styles.message}`}>
-            {message.message}
+            <ReactMarkdown>{message.message}</ReactMarkdown>
           </div>
         </div>
       )}

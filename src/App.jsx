@@ -28,11 +28,15 @@ function App() {
     const response = await openai.createChatCompletion({
       model: "gpt-3.5-turbo-0301",
       temperature: 0.5,
+      max_tokens: 100,
       messages: [{ role: "user", content: `${input}` }],
   })
     
     const message = response.data.choices[0].message.content;
     setChatlog([...chatLogNew, { user: 'gpt', message: `${message}`, id: chatlog.length }]);
+
+    // Checking response
+    console.log(response)
 
   }
 
