@@ -9,9 +9,14 @@ function Aside() {
 
         <h1 className={`${styles.sidemenuHeading}`}>Nicequest OpenAI</h1>
 
+        <a href="https://www.nicequest.com/es" target="_blank" rel="noopener noreferrer">
+          www.nicequest.com/es
+        </a>
+        
         <p className={`${styles.rights}`}>
           Developed by Jordi Sanchez 2023. V. 1.0.2
         </p>
+
     </aside>
   )
 }

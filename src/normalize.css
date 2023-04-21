@@ -83,6 +83,9 @@
   
   a {
     background-color: transparent;
+    font-size: 1.2em;
+    color: #125ae1;
+    text-decoration: none;
   }
   
   /**
