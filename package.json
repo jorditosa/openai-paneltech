@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port 5000 --cors true",
-    "build": "vite build -w",
+    "build": "vite build",
     "preview": "vite preview",
     "test": "vitest"
   },
