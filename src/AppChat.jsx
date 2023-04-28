@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { Configuration, OpenAIApi } from "openai";
 import ChatMessage from './components/ChatMessage'
-import { FaPaperPlane, FaImage } from 'react-icons/fa'
+import { FaPaperPlane } from 'react-icons/fa'
 import Aside from './components/Aside'
 
-function App() {
+function AppChat() {
 
   const [input, setInput] = useState('');
   const [chatlog, setChatlog] = useState([{
@@ -44,7 +44,7 @@ function App() {
     <div className="App">
       <Aside chatlog={chatlog} />
 
-      <section className='chatbox'>
+      <section className='chatboxMessage'>
         <div className="chat-log">
           {chatlog.map((message, index) => {
               return <ChatMessage key={index} message={message} chatlog={chatlog} />
@@ -67,9 +67,6 @@ function App() {
             <button type="submit" className="chat-input-btnSend">
               <FaPaperPlane size={30} />
             </button>
-            <span disabled className='chat-input-btnImage'>
-              <FaImage size={30} />
-            </span>
           </form>
         </div>
       </section>
@@ -77,4 +74,4 @@ function App() {
   )
 }
 
-export default App
+export default AppChat

@@ -57,9 +57,20 @@ button {
 Chat logs Section
 **/
 
-.chatbox {
+.chatboxMessage {
   flex: 1;
   background-color: #125ae1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 5vh 1vw 10vh 1vw;
+}
+
+.chatboxImage {
+  flex: 1;
+  background-color: #ffc500;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -127,10 +138,10 @@ form {
   gap: 20px;
 }
 
-.chat-input-btnImage {
+.chat-input-btn {
   background-color: transparent;
-  color: #125ae185;
-  display: flex;
+  color: #125ae1;
+  display: block;
   gap: 20px;
 }
 
